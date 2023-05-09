@@ -1,4 +1,4 @@
-**To build the containers locally, follow this command:**
+**To build a Windows container locally, execute these commands. These commands have been tested on Windows PowerShell when run as an administrator:**
 ```
 md C:\tf
 cd C:\tf
@@ -22,7 +22,7 @@ docker run --name tf -itd --rm -v C:\tf\tensorflow:C:\workspace -v C:\tf\tmp:C:\
 
 ```
 
-**To create the TensorFlow package-builder run:**
+**To create the TensorFlow package builder run:**
 ```
 docker exec tf bazel build //tensorflow/tools/pip_package:build_pip_package
 
