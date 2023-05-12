@@ -16,8 +16,10 @@ cd C:\tf\tensorflow
 git fetch 
 git checkout master
 
-# follow all options and select the defaults 
+# follow all options and select the defaults
+docker exec -it tf bash
 python ./configure.py 
+exit
 docker run --name tf -itd --rm -v C:\tf\tensorflow:C:\workspace -v C:\tf\tmp:C:\tmp -e TEST_TMPDIR=C:\tmp -w C:\workspace win-docker bash
 
 ```
